@@ -1,0 +1,30 @@
+.From{
+    width: 45%;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+.From input{
+    padding: 15px 20px;
+    width: 100%;
+    display: inline-block;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.From label{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #b47d17;
+    width: 100%;
+    display: block;
+    margin-left: 20%;
+}
+
+@media(max-width:500px){
+    .From{
+        width: 100%;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
