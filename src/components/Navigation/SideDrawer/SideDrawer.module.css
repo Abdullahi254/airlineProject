@@ -18,7 +18,7 @@
 .Close{
     transform: translateX(-100%);
 }
-@media(min-width:501px){
+@media(min-width:610px){
     .SideDrawer{
         display: none;
     }

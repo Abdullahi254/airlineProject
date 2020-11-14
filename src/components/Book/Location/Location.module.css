@@ -1,0 +1,32 @@
+.Location{
+    position: absolute;
+    width: 500px;
+    background-color: #f1f1f1;
+    margin-left: 5px;
+    overflow: auto;
+    box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 12px;
+}
+.Location ul{
+    list-style: none;
+}
+.Location li{
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #b47d17;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
+.Location li:hover{
+    background-color: #dddddd;
+    cursor: pointer;
+}
+
+@media(max-width:1428px){
+    .Location{
+        position: relative;
+        width: 96%;
+        margin: 0 2%;
+    }
+}

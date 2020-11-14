@@ -5,7 +5,7 @@
     width: 40px;
 }
 
-@media(min-width:501px){
+@media(min-width:610px){
     .DrawerButton{
         display: none;
     }

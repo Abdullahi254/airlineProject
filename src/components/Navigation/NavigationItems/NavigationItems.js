@@ -5,7 +5,7 @@ class NavigationItems extends Component {
     render() {
         return (
            <ul className='NavigationItems'>
-               <NavigationItem >Book</NavigationItem>
+               <NavigationItem active>Book</NavigationItem>
                <NavigationItem >Manage</NavigationItem>
                <NavigationItem>Fly Kesses</NavigationItem>
                <NavigationItem>about us</NavigationItem>
