@@ -2,7 +2,11 @@ import * as actionTypes from './actions'
 
 const initialState = {
     from:'',
-    to: ''
+    to: '',
+    cabin:'',
+    adult:1,
+    children:0,
+    infant:0
 }
 
 const reducer = (state=initialState,action)=>{
@@ -17,6 +21,30 @@ const reducer = (state=initialState,action)=>{
             state = {
                 ...state,
                 to:action.to
+            }
+            return state
+        case actionTypes.SELECT_CABIN_TYPE:
+            state = {
+                ...state,
+                cabin:action.cabin
+            }
+            return state
+        case actionTypes.ADD_ADULT:
+            state = {
+                ...state,
+                adult:state.adult +=1
+            }
+            return state
+        case actionTypes.ADD_ChILD:
+            state = {
+                ...state,
+                children:state.children +=1
+            }
+            return state
+        case actionTypes.ADD_INFANT:
+            state = {
+                ...state,
+                infant:state.infant +=1
             }
             return state
         default:

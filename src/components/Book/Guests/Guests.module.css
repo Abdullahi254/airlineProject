@@ -1,0 +1,23 @@
+.Guests{
+    position: absolute;
+    width: 500px;
+    background-color: #f1f1f1;
+    margin-left: 5px;
+    overflow: auto;
+    box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    
+}
+.Row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 12px 20%;
+}
+@media(max-width:1428px){
+    .Guests{
+        position: relative;
+        width: 96%;
+        margin: 0 2%;
+    }
+}
