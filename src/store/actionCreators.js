@@ -20,21 +20,44 @@ export const getCabin = cabin=>{
         cabin
     }
 }
-
-export const addAdult = ()=>{
-    return{
-        type:actionTypes.ADD_ADULT
+export const addPerson = person=>{
+    switch(person){
+        case 'adult':
+            return {
+                type: actionTypes.ADD_ADULT
+            }
+        case 'children':
+            return {
+                type: actionTypes.ADD_ChILD
+            }
+        case 'infant':
+            return {
+                type: actionTypes.ADD_INFANT
+            }
+        default:
+            return {
+                type: actionTypes.ADD_ADULT
+            }
     }
 }
 
-export const addChild = ()=>{
-    return{
-        type:actionTypes.ADD_ChILD
-    }
-}
-
-export const addInfant = ()=>{
-    return{
-        type:actionTypes.ADD_INFANT
+export const removePerson = person=>{
+    switch(person){
+        case 'adult':
+            return {
+                type: actionTypes.REMOVE_ADULT
+            }
+        case 'children':
+            return {
+                type: actionTypes.REMOVE_ChILD
+            }
+        case 'infant':
+            return {
+                type: actionTypes.REMOVE_INFANT
+            }
+        default:
+            return {
+                type: actionTypes.REMOVE_ADULT
+            }
     }
 }

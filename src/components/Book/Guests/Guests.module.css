@@ -1,6 +1,6 @@
 .Guests{
     position: absolute;
-    width: 500px;
+    width: 450px;
     background-color: #f1f1f1;
     margin-left: 5px;
     overflow: auto;
@@ -12,12 +12,51 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 12px 20%;
+    margin: 12px 0;
+}
+.Container2 label{
+    font-family:'Montserrat', sans-serif;
+    padding: 0 3px;
+}
+.Age {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    width: 100%;
+}
+button{
+    display: inline-block;
+    padding: 12px 36px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 6px;
+    border: 1px solid black;
+}
+.Positive:hover{
+    border: 2px solid #b47d17;
+}
+.Negative:hover{
+    border: 2px solid #cacaca;
+}
+button:disabled{
+    border: 2px solid #cacaca;
 }
 @media(max-width:1428px){
     .Guests{
         position: relative;
         width: 96%;
-        margin: 0 2%;
+        margin: auto;
+    }
+    .Age{
+        font-size: 12px;
+    }
+    .Container2{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .Container2 label{
+        margin-top: 10px;
     }
 }
+
+

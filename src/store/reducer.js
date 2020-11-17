@@ -47,6 +47,24 @@ const reducer = (state=initialState,action)=>{
                 infant:state.infant +=1
             }
             return state
+            case actionTypes.REMOVE_ADULT:
+                state = {
+                    ...state,
+                    adult:state.adult -=1
+                }
+                return state
+            case actionTypes.REMOVE_ChILD:
+                state = {
+                    ...state,
+                    children:state.children -=1
+                }
+                return state
+            case actionTypes.REMOVE_INFANT:
+                state = {
+                    ...state,
+                    infant:state.infant -=1
+                }
+                return state
         default:
             return state
     }

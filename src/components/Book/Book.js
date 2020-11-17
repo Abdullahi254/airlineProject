@@ -8,7 +8,8 @@ class Book extends Component {
     state = {
         showFrom:false,
         showTo:false,
-        showCabin:false
+        showCabin:false,
+        showGuests:false
     }
     getFromLocation = (location)=>{
         this.props.getFrom(location)
@@ -48,6 +49,11 @@ class Book extends Component {
                 showCabin:false
             })
         }
+        if(this.state.showGuests){
+            this.setState({
+                showGuests:false
+            })
+        }
     }
     getCabinType = (cabin)=>{
         this.props.getCabin(cabin)
@@ -60,6 +66,11 @@ class Book extends Component {
             showCabin:true
         })
     }
+    guestsPopUpHandler = ()=>{
+        this.setState({
+            showGuests:true
+        })
+    }
     render() {
         return (
             <div className={classes.Book} onClick={this.closePopUp}>
@@ -70,7 +81,8 @@ class Book extends Component {
                     <DynamicInput label='Outband' placeholder='Outband' type='date'/>
                     <DynamicInput label='Return' placeholder='Outband' type='date'/>
                     <DynamicInput label='Cabin' placeholder='Cabin' showCabin={this.state.showCabin} getCabinType={this.getCabinType} popUp={this.cabinPopUpHandler} value={this.props.cabin} readOnly/>
-                    <DynamicInput label='Guests' placeholder='Guests' showGuests readOnly/>
+                    <DynamicInput label='Guests' placeholder='Guests' showGuests={this.state.showGuests} readOnly value={'Adult '+this.props.guestState[0]+', Children '+this.props.guestState[1]+', Infants '+this.props.guestState[2]+'.'}
+                    popUp={this.guestsPopUpHandler}/>
                 </div>
             </div>
         );
@@ -80,14 +92,15 @@ const mapsActionToProps = (dispatch)=>{
     return{
         getFrom:(location)=>dispatch(getFrom(location)),
         getTo:(location)=>dispatch(getTo(location)),
-        getCabin:(cabin)=>dispatch(getCabin(cabin))
+        getCabin:(cabin)=>dispatch(getCabin(cabin)),
     }
 }
 const mapStateToProps = (state)=>{
     return{
         from:state.from,
         to:state.to,
-        cabin:state.cabin
+        cabin:state.cabin,
+        guestState:[state.adult,state.children,state.infant]
     }
 }
 export default connect(mapStateToProps,mapsActionToProps)(Book);
