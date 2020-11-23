@@ -8,3 +8,7 @@ export const ADD_INFANT = 'ADD_INFANT';
 export const REMOVE_ADULT = 'REMOVE_ADULT';
 export const REMOVE_ChILD = 'REMOVE_ChILD';
 export const REMOVE_INFANT = 'REMOVE_INFANT';
+
+
+export const GET_OUTBOUND = 'GET_OUTBOUND';
+export const GET_RETURN = 'GET_RETURN';

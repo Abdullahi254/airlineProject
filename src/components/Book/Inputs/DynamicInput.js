@@ -6,9 +6,14 @@ import Guests from '../Guests/Guests'
 class DynamicInput extends Component {
     render() {
         return (
-            <div className={classes.From} style={{marginRight:this.props.space}}>
+            <div className={classes.From} style={{marginRight:this.props.space,display:this.props.hide?'none':'block'}}>
                 <label className={classes.Labels}>{this.props.label}</label>
-                <input type={this.props.type} placeholder={this.props.placeholder} onClick={this.props.popUp} value={this.props.value} readOnly={this.props.readOnly}/>
+                <input type={this.props.type} placeholder={this.props.placeholder}
+                onClick={this.props.popUp} 
+                value={this.props.value}
+                readOnly={this.props.readOnly}
+                min={this.props.min}
+                onChange={this.props.change}/>
                 <Location show={this.props.show} getLocation={this.props.getLocation}/>
                 <Cabin showCabin={this.props.showCabin} getCabinType={this.props.getCabinType}/>
                 <Guests showGuests={this.props.showGuests}/>

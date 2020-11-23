@@ -41,7 +41,7 @@ button{
 button:disabled{
     border: 2px solid #cacaca;
 }
-@media(max-width:1428px){
+@media(max-width:1453px){
     .Guests{
         position: relative;
         width: 96%;

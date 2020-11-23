@@ -61,3 +61,17 @@ export const removePerson = person=>{
             }
     }
 }
+
+export const getOutBound = (date)=>{
+    return{
+        type:actionTypes.GET_OUTBOUND,
+        date
+    }
+}
+
+export const getRound = (date)=>{
+    return{
+        type:actionTypes.GET_RETURN,
+        date
+    }
+}

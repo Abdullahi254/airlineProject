@@ -6,7 +6,9 @@ const initialState = {
     cabin:'',
     adult:1,
     children:0,
-    infant:0
+    infant:0,
+    outBound:undefined,
+    round:undefined
 }
 
 const reducer = (state=initialState,action)=>{
@@ -63,6 +65,18 @@ const reducer = (state=initialState,action)=>{
                 state = {
                     ...state,
                     infant:state.infant -=1
+                }
+                return state
+            case actionTypes.GET_OUTBOUND:
+                state = {
+                    ...state,
+                    outBound:action.date
+                }
+                return state
+            case actionTypes.GET_RETURN:
+                state = {
+                    ...state,
+                    return:action.date
                 }
                 return state
         default:

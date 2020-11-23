@@ -3,8 +3,14 @@ import classes from './Location.module.css'
 
 class Location extends Component {
     render() {
-        const airpotList = ['Jomo Kenyatta International Airport (JKIA)','Kisumu International Airport (KIS)','Eldoret International Airport (EDL)',
-            'Moi International Airport, Mombasa','Wilson Airport','Malindi Airstrip','Nanyuki Airstrip']
+        const airpotList = [
+            'Jomo Kenyatta International Airport (JKIA)',
+            'Kisumu International Airport (KIS)',
+            'Eldoret International Airport (EDL)',
+            'Moi International Airport, Mombasa',
+            'Wilson Airport',
+            'Malindi Airstrip',
+            'Nanyuki Airstrip']
         return (
             <div className={classes.Location} style={{display:this.props.show?'block':'none'}}>
                 <ul>
