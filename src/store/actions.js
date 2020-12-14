@@ -12,3 +12,7 @@ export const REMOVE_INFANT = 'REMOVE_INFANT';
 
 export const GET_OUTBOUND = 'GET_OUTBOUND';
 export const GET_RETURN = 'GET_RETURN';
+
+export const TOOGLE_SPINNER = 'TOOGLE_SPINNER';
+export const TURN_OFF_SPINNER = "TURN_OFF_SPINNER";
+export const TURN_ON_SPINNER = "TURN_ON_SPINNER";

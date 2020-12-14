@@ -8,7 +8,8 @@ const initialState = {
     children:0,
     infant:0,
     outBound:undefined,
-    round:undefined
+    round:undefined,
+    spinner:false
 }
 
 const reducer = (state=initialState,action)=>{
@@ -77,6 +78,24 @@ const reducer = (state=initialState,action)=>{
                 state = {
                     ...state,
                     return:action.date
+                }
+                return state
+            case actionTypes.TOOGLE_SPINNER:
+                state = {
+                    ...state,
+                    spinner:!state.spinner
+                }
+                return state
+            case actionTypes.TURN_OFF_SPINNER:
+                state = {
+                    ...state,
+                    spinner:false
+                }
+                return state
+             case actionTypes.TURN_ON_SPINNER:
+                state = {
+                    ...state,
+                    spinner:true
                 }
                 return state
         default:

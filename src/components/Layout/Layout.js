@@ -3,6 +3,9 @@ import SideDrawer from '../Navigation/SideDrawer/SideDrawer'
 import React, { Component } from 'react';
 
 class Layout extends Component {
+  componentDidMount(){
+    this.props.history.push('/book')
+  }
   state = {
     showSideDrawer: false
   }

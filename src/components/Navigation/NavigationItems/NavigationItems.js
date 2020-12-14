@@ -5,10 +5,10 @@ class NavigationItems extends Component {
     render() {
         return (
            <ul className='NavigationItems'>
-               <NavigationItem active>Book</NavigationItem>
-               <NavigationItem >Manage</NavigationItem>
-               <NavigationItem>Fly Kesses</NavigationItem>
-               <NavigationItem>about us</NavigationItem>
+               <NavigationItem pathTo='/book'>Book</NavigationItem>
+               <NavigationItem pathTo='/manageflights'>Manage</NavigationItem>
+               <NavigationItem pathTo='/flykesses'>Fly Kesses</NavigationItem>
+               <NavigationItem pathTo='/about'>about us</NavigationItem>
            </ul>
         );
     }

@@ -75,3 +75,9 @@ export const getRound = (date)=>{
         date
     }
 }
+
+export const toogleSpinner = ()=>{
+    return{
+        type:actionTypes.TOOGLE_SPINNER
+    }
+}
