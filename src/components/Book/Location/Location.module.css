@@ -1,6 +1,6 @@
 .Location{
     position: absolute;
-    width: 500px;
+    width: 24rem;
     background-color: #f1f1f1;
     margin-left: 5px;
     overflow: auto;
@@ -23,10 +23,39 @@
     cursor: pointer;
 }
 
-@media(max-width:1428px){
+@media(max-width:1230px){
     .Location{
-        position: relative;
-        width: 96%;
-        margin: 0 2%;
+        margin-left: -55px;
+    }
+}
+
+@media(max-width:970px){
+    .Location{
+        width: 20rem;
+    }
+}
+
+@media(max-width:786px){
+    .Location{
+        width: 16rem;
+    }
+}
+
+@media(max-width:610px){
+    .Location{
+        width: 24rem;
+        margin-left: 5px;
+    }
+}
+
+@media(max-width:460px){
+    .Location{
+        width: 17rem;
+    }
+}
+
+@media(max-width:330px){
+    .Location{
+        width: 14rem;
     }
 }

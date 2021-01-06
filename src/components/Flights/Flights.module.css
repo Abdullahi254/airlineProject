@@ -16,14 +16,14 @@
     background-color: #24252a;
 }
 
-button{
+.Back{
     background-color: #24252a;
     color: white;
     cursor: pointer;
     border: 0px;
 }
 
-button:hover{
+.Back:hover{
     background-color: red;
 }
 

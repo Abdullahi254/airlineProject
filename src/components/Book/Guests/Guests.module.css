@@ -1,6 +1,6 @@
 .Guests{
     position: absolute;
-    width: 450px;
+    width: 20rem;
     background-color: #f1f1f1;
     margin-left: 5px;
     overflow: auto;
@@ -14,12 +14,17 @@
     justify-content: space-between;
     margin: 12px 0;
 }
+.Container2{
+    display: flex;
+    flex-wrap: nowrap;
+}
 .Container2 label{
     font-family:'Montserrat', sans-serif;
     padding: 0 3px;
+    margin-top: 10px;
 }
 .Age {
-    font-size: 20px;
+    font-size: 14px;
     font-family: 'Montserrat', sans-serif;
     display: inline-block;
     width: 100%;
@@ -33,29 +38,69 @@ button{
     border: 1px solid black;
 }
 .Positive:hover{
-    border: 2px solid #b47d17;
+    background-color:#b47d17;
 }
 .Negative:hover{
-    border: 2px solid #cacaca;
+    background-color:red;
 }
 button:disabled{
-    border: 2px solid #cacaca;
+    background-color:#cacaca;
 }
-@media(max-width:1453px){
+:disabled:hover{
+    background-color:#919191;
+}
+@media(max-width:1230px){
     .Guests{
-        position: relative;
-        width: 96%;
-        margin: auto;
+        margin-left: -55px;
+    }
+}
+
+@media(max-width:970px){
+    .Guests{
+        width: 20rem;
+    }
+}
+
+@media(max-width:786px){
+    .Guests{
+        width: 16rem;
+    }
+    button{
+        padding: 10px 25px;
     }
     .Age{
         font-size: 12px;
     }
-    .Container2{
-        display: flex;
-        flex-wrap: nowrap;
+}
+
+@media(max-width:610px){
+    .Guests{
+        width: 24rem;
+        margin-left: 5px;
     }
-    .Container2 label{
-        margin-top: 10px;
+    button{
+        padding: 12px 36px;
+    }
+    .Age{
+        font-size: 14px;
+    }
+}
+
+@media(max-width:460px){
+    .Guests{
+        width: 17rem;
+    }
+}
+
+@media(max-width:330px){
+    .Guests{
+        width: 14rem;
+    }
+    button{
+        padding: 10px 25px;
+    }
+    .Age{
+        font-size: 12px;
     }
 }
 

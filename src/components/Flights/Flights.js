@@ -22,7 +22,7 @@ class Flights extends Component {
                     <NavigationItem pathTo={'/book/selectflight'} >Select Flight</NavigationItem>
                     <NavigationItem pathTo='/book/selectseat' clicked={this.handleClick}>Seat Selection</NavigationItem>
                     <NavigationItem pathTo='/book/payment' clicked={this.handleClick}>Payment</NavigationItem>
-                    <button onClick={this.backButtonHandler}>Back</button>
+                    <button onClick={this.backButtonHandler} className={classes.Back}>Back</button>
                 </nav>
                 <SearchFlight/>
             </div>

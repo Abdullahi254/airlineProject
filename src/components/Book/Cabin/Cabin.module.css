@@ -1,6 +1,6 @@
 .Cabin{
     position: absolute;
-    width: 500px;
+    width: 24rem;
     background-color: #f1f1f1;
     margin-left: 5px;
     overflow: auto;
@@ -22,10 +22,40 @@
     background-color: #dddddd;
     cursor: pointer;
 }
-@media(max-width:1428px){
+
+@media(max-width:1230px){
     .Cabin{
-        position: relative;
-        width: 96%;
-        margin: 0 2%;
+       width: 20rem;
+    }
+}
+
+@media(max-width:970px){
+    .Cabin{
+        width: 20rem;
+    }
+}
+
+@media(max-width:786px){
+    .Cabin{
+        width: 16rem;
+    }
+}
+
+@media(max-width:610px){
+    .Cabin{
+        width: 24rem;
+        margin-left: 5px;
+    }
+}
+
+@media(max-width:460px){
+    .Cabin{
+        width: 17rem;
+    }
+}
+
+@media(max-width:330px){
+    .Cabin{
+        width: 14rem;
     }
 }

@@ -18,5 +18,9 @@
 .Radio{
     width: 100%;
 }
-
+@media(max-width:393px){
+    .Book{
+        max-width: 80%;
+    }
+}
 
