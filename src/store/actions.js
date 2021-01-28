@@ -16,3 +16,17 @@ export const GET_RETURN = 'GET_RETURN';
 export const TOOGLE_SPINNER = 'TOOGLE_SPINNER';
 export const TURN_OFF_SPINNER = "TURN_OFF_SPINNER";
 export const TURN_ON_SPINNER = "TURN_ON_SPINNER";
+
+export const  AIRPOTLIST =  [
+    'Jomo Kenyatta International Airport (JKIA)',
+    'Kisumu International Airport (KIS)',
+    'Eldoret International Airport (EDL)',
+    'Moi International Airport, Mombasa',
+    'Wilson Airport',
+    'Malindi Airstrip',
+    'Nanyuki Airstrip'];
+
+
+export const CHANGE_FLIGHT_TYPE = "CHANGE_FLIGHT_TYPE";
+
+

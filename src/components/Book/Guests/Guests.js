@@ -22,7 +22,7 @@ class Guests extends Component {
                             <label className={classes.Age}>{names[index]}</label>
                         </div>
                         <div className={classes.Container2}>
-                            <button className={classes.Negative} onClick={()=>this.removePersonHandler(labels[index])} disabled={this.props.guestState[index]<1?true:false}>-</button>
+                            <button className={classes.Negative} onClick={()=> this.props.guestState[0] === 1? null:this.removePersonHandler(labels[index])} disabled={this.props.guestState[index]<1?true:false}>-</button>
                             <label>{this.props.guestState[index]}</label>
                             <button className={classes.Positive} onClick={()=>this.addPersonHandler(labels[index])}>+</button>
                         </div>

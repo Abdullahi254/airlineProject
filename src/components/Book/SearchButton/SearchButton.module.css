@@ -13,6 +13,11 @@
     background-color: #b47d17;
 }
 .SearchButton:hover,
-.SearchButton:checked .SearchButton{
+.SearchButton:checked
+ .SearchButton{
     background-color: #4e3506;
+}
+
+.SearchButton:disabled{
+    background-color: grey;
 }

@@ -18,8 +18,6 @@ class Book extends Component {
         showTo:false,
         showCabin:false,
         showGuests:false,
-        round:true,
-        oneWay:false,
         backDrop:false,
     }
     getFromLocation = (location)=>{
@@ -83,10 +81,7 @@ class Book extends Component {
         })
     }
     radioButtonHandler = ()=>{
-        this.setState({
-            round:!this.state.round,
-            oneWay:!this.state.oneWay
-        })
+        this.props.changeFlightType()
     }
     changeOutboundHandler = (event)=>{
         this.props.getOutBound(event.target.value.toString())
@@ -114,14 +109,14 @@ class Book extends Component {
                 <div className={classes.Book} onClick={this.closePopUp}>
                     <div className={classes.Row}>
                         <div className={classes.Radio}>
-                            <Radio checked={this.state.round} clicked={this.radioButtonHandler}>Return</Radio>
-                            <Radio checked={this.state.oneWay} clicked={this.radioButtonHandler}>OneWay</Radio>
+                            <Radio checked={this.props.returnB} clicked={this.radioButtonHandler}>Return</Radio>
+                            <Radio checked={this.props.oneWayB} clicked={this.radioButtonHandler}>OneWay</Radio>
                         </div>
                         <DynamicInput label='Flying From' placeholder='From' show={this.state.showFrom} getLocation={this.getFromLocation} value={this.props.from} popUp={this.popUpHandler} readOnly />
                         {/* <ToLogo/> */}
                         <DynamicInput label='Flying To' placeholder='To' show={this.state.showTo} getLocation={this.getToLocation} value={this.props.to} popUp={this.popUpHandler2} readOnly />
                         <DynamicInput label='Outband' placeholder='Outband' type='date' min={year + '-' + month + '-' + day} change={this.changeOutboundHandler} />
-                        <DynamicInput label='Return' placeholder='Outband' type='date' hide={!this.state.round} min={year + '-' + month + '-' + nextDay} change={this.changeRoundHandler} />
+                        <DynamicInput label='Return' placeholder='Outband' type='date' hide={!this.props.returnB} min={year + '-' + month + '-' + nextDay} change={this.changeRoundHandler} />
                         <DynamicInput label='Cabin' placeholder='Cabin' showCabin={this.state.showCabin} getCabinType={this.getCabinType} popUp={this.cabinPopUpHandler} value={this.props.cabin} readOnly />
                         <DynamicInput label='Guests' placeholder='Guests' showGuests={this.state.showGuests} readOnly value={'Adult ' + this.props.guestState[0] + ', Children ' + this.props.guestState[1] + ', Infants ' + this.props.guestState[2] + '.'}
                             popUp={this.guestsPopUpHandler} />
@@ -142,7 +137,8 @@ const mapsActionToProps = (dispatch)=>{
         getOutBound:(date)=>dispatch(getOutBound(date)),
         getRound:(date)=>dispatch(getRound(date)),
         toogleSpinner:()=>dispatch(toogleSpinner()),
-        turnOnSpinner:()=>dispatch({type:"TURN_ON_SPINNER"})
+        turnOnSpinner:()=>dispatch({type:"TURN_ON_SPINNER"}),
+        changeFlightType:()=>dispatch({type:"CHANGE_FLIGHT_TYPE"})
     }
 }
 const mapStateToProps = (state)=>{
@@ -153,7 +149,9 @@ const mapStateToProps = (state)=>{
         guestState:[state.adult,state.children,state.infant],
         outBound:state.outBound,
         round:state.round,
-        spinner:state.spinner
+        spinner:state.spinner,
+        returnB:state.returnB,
+        oneWayB:state.oneWayB
     }
 }
 export default connect(mapStateToProps,mapsActionToProps)(Book);
